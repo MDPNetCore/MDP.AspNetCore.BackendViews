@@ -1,0 +1,116 @@
+
+/* main-container */
+.main-container {
+    padding: 0;
+}
+
+.main-container *:focus {
+    box-shadow: none !important;
+}
+
+.main-container .form-switch {
+    margin: 0rem;
+}
+
+.main-container .form-switch .form-check-input {
+    border-color: rgba(0, 0, 0, 0.65);
+}
+
+/* main-header */
+.main-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.main-header.navbar .nav-item {
+    display: flex;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header.navbar .nav-link {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.main-header.navbar .navbar-toggler {
+    display: block;
+    border: 0;
+}
+
+.main-header.navbar .navbar-brand {
+    margin: 0rem 0.5rem;
+}
+
+.main-header.navbar .user-profile {
+    width: 18rem;
+}
+
+.main-header.navbar .user-profile li {
+    padding: 0rem 0.5rem;
+    text-align: center;
+}
+
+
+/* main-sidebar */
+.main-sidebar {
+}
+
+
+/* main-content */
+.main-content {
+}
+
+
+/* image  */
+.img-circle-xs {
+    width: 1.0rem;
+    height: 1.0rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-circle-sm {
+    width: 2.0rem;
+    height: 2.0rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-circle-md {
+    width: 4.0rem;
+    height: 4.0rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-circle-lg {
+    width: 8.0rem;
+    height: 8.0rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* color */
+.bg-red {
+    background-color: red !important;
+}
+
+.bg-blue {
+    background-color: blue !important;
+}
+
+.bg-grey {
+    background-color: grey !important;
+}
+
+.bg-yellow {
+    background-color: yellow !important;
+}
+
+.bg-green {
+    background-color: green !important;
+}

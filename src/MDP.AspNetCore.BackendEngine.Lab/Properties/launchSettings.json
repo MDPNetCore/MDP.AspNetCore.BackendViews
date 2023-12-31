@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "MDP.AspNetCore.BackendEngine.Lab": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "",
+      "commandLineArgs": "--start-maximized",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:61144;"
+    }
+  }
+}
