@@ -1,12 +1,12 @@
 
 # Site
-title: MDP.AspNetCore.AdminLTE
+title: MDP.AspNetCore
 
 # Theme
 remote_theme: pmarsceill/just-the-docs
 aux_links:
   "Source Code on GitHub":
-    - "//github.com/Clark159/MDP.AspNetCore.AdminLTE"
+    - "//github.com/MDPNetCore"
 color_scheme: dark
 callouts:
   highlight:
