@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "_default";
+}
+
+<!-- content-header -->
+<div class="container-fluid">
+    <h3 class="content-header">Default</h3>
+</div>
+
+<!-- content-body -->
+<div class="container-fluid flex-fill flex-fill-scroll">
+
+    <!-- block001 -->
+    <div>block001 - start</div>
+    @for (var i = 0; i < 100; i++)
+    {
+        <div>block001</div>
+    }
+    <div>block001 - end</div>
+</div>

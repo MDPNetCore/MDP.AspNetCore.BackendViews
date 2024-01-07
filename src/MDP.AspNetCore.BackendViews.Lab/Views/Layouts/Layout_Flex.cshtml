@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "_default";
+}
+
+<!-- content-header -->
+<div class="container-fluid">
+    <h3 class="content-header">Layout_Flex</h3>
+</div>
+
+<!-- content-body -->
+<div class="container-fluid flex-fill">
+    <div class="bg-blue flex-fixed" style="height: 100px;">Blue Content</div>
+
+    <!-- container start -->
+    <div class="d-flex flex-fill flex-column flex-fill-scroll">
+        <div class="bg-yellow">Yellow Content<br />Yellow Content<br />Yellow Content<br /></div>
+
+        <!-- container start -->
+        <div class="d-flex flex-fill flex-column">
+            <div class="bg-green">Green Content</div>
+
+            <!-- block001 start -->
+            <div class="bg-grey d-flex flex-fill flex-column">
+                <div>block001 - start</div>
+                @for (var i = 0; i < 100; i++)
+                {
+                    <div>block001</div>
+                }
+                <div>block001 - end</div>
+            </div>
+            <!-- block001 end -->
+
+            <div class="bg-green">Green Content</div>
+        </div>
+        <!-- container end -->
+
+        <div class="bg-yellow">Yellow Content<br />Yellow Content<br />Yellow Content<br /></div>
+    </div>
+    <!-- container end -->
+
+    <div class="bg-blue flex-fixed" style="height: 100px;">Blue Content</div>
+</div>

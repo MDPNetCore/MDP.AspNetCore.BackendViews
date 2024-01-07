@@ -1,0 +1,57 @@
+/* navbar */
+.main-header .navbar {
+    padding: 0.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* navbar-nav */
+.main-header .navbar-nav {
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* nav-item */
+.main-header .nav-item {
+    padding: 0rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* nav-link */
+.main-header .nav-link {
+    padding: 0rem;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.main-header .nav-link > * + * {
+    margin-left: 0.5rem;
+}
+
+/* nav-profile */
+.main-header .nav-profile {
+    min-width: 16rem;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 0rem;
+}
+
+.main-header .nav-profile .dropdown-item {
+    margin: 0.5rem 0rem;
+    padding: 0rem 0.5rem;
+}

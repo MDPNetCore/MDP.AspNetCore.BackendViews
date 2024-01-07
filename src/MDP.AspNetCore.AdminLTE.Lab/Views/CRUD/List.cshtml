@@ -1,0 +1,115 @@
+﻿@{
+    Layout = "_default";
+}
+
+<!-- list -->
+<div class="container-fluid d-flex flex-fill">
+
+    <!-- search -->
+    <div class="card show" id="searchPanel">
+        <div class="card-body">
+            <form class="row" action="/pages/crud.html" method="post">
+
+                <!-- input -->
+                <div class="col-12 col-md-auto form-group row">
+                    <label class="col-auto form-label"   for="inputName">客戶姓名：</label>
+                    <input class="col      form-control" id="inputName" type="text" />
+                </div>
+
+                <div class="col-12 col-md-auto form-group row">
+                    <label class="col-auto form-label"   for="inputPhone">客戶電話：</label>
+                    <input class="col      form-control" id="inputPhone" type="text" />
+                </div>
+
+                <div class="col-12 col-md-auto form-group row">
+                    <label class="col-auto form-label"   for="inputAddress">客戶地址：</label>
+                    <input class="col      form-control" id="inputAddress" type="text" />
+                </div>
+
+                <!-- command -->
+                <div class="col-12 col-md-auto form-group row">
+                    <a class="col-auto ml-auto ml-md-2 btn btn-rounded btn-primary" href="#" onclick="alert('查詢');"><i class="fa fa-search"></i>&nbsp;查詢</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="card">
+        <div class="card-body">
+
+            <!-- command -->
+            <div class="row mb-3">
+                <div class="col-auto mr-auto">
+                    <a class="btn btn-rounded btn-primary" href="/CRUD/Add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                    <a class="btn btn-rounded btn-success" href="/CRUD/Update"><i class="fa fa-edit"></i>&nbsp;修改</a>
+                    <a class="btn btn-rounded btn-danger" href="/CRUD/Remove"><i class="fa fa-trash"></i>&nbsp;刪除</a>
+                    <a class="btn btn-rounded btn-warning" href="#" onclick="alert('匯入');"><i class="fa fa-upload"></i>&nbsp;匯入</a>
+                    <a class="btn btn-rounded btn-info" href="#" onclick="alert('匯出');"><i class="fa fa-download"></i>&nbsp;匯出</a>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <div class="btn-group">
+                        <button class="btn btn-rounded btn-default" type="button" title="顯示/隱藏查詢" data-toggle="collapse" data-target="#searchPanel"><i class="fa fa-filter"></i></button>
+                        <button class="btn btn-rounded btn-default" type="button" title="重新載入" onclick="alert('重新載入');"><i class="fa fa-sync-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- table -->
+            <div class="row">
+                <div class="col-12 table-responsive p-0">
+                    <table class="table table-sm table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="th th-fit th-select-all"><input type="checkbox" /></th>
+                                <th>Header001</th>
+                                <th>Header002</th>
+                                <th>Header003</th>
+                                <th>Header004</th>
+                                <th>Header005</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < 10; i++)
+                            {
+                                <tr>
+                                    <td class="td td-fit"><input type="checkbox" /></td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">Data001</td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">Data002</td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">Data003</td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">Data004</td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">Data005</td>
+                                    <td class="td td-fit">
+                                        <a class="btn btn-rounded btn-sm btn-success" href="/CRUD/Update"><i class="fa fa-edit"></i>&nbsp;修改</a>
+                                        <a class="btn btn-rounded btn-sm btn-danger" href="/CRUD/Remove"><i class="fa fa-trash"></i>&nbsp;刪除</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- pagination -->
+            <div class="row mt-3 mt-md-0">
+                <div class="col-auto d-none d-md-block">
+                    <div class="h3">顯示第X到第Y筆資料，共Z筆資料</div>
+                </div>
+                <div class="col-auto ml-auto">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item disabled"><a class="page-link" href="#" onclick="alert('Previous');"><i class="fa fa-chevron-left"></i></a></li>
+                        <li class="paginate_button page-item active"><a class="page-link" href="#" onclick="alert('1');">1</a></li>
+                        <li class="paginate_button page-item "><a class="page-link" href="#" onclick="alert('2');">2</a></li>
+                        <li class="paginate_button page-item "><a class="page-link" href="#" onclick="alert('3');">3</a></li>
+                        <li class="paginate_button page-item "><a class="page-link" href="#" onclick="alert('4');">4</a></li>
+                        <li class="paginate_button page-item "><a class="page-link" href="#" onclick="alert('5');">5</a></li>
+                        <li class="paginate_button page-item "><a class="page-link" href="#" onclick="alert('Next');"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

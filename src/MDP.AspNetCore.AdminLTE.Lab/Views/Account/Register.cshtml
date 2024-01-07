@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "_basic";
+}
+
+<!-- form -->
+<div class="container-fluid d-flex flex-fill">
+    <div class="row m-0 d-flex flex-fill">
+        <div class="col-auto m-auto">
+
+            <!-- register -->
+            <div class="card card-primary card-outline m-0">
+                <!-- header -->
+                <h3 class="card-header text-center">
+                    CLK Software
+                </h3>
+                <!-- body -->
+                <div class="card-body">
+                    <form action="/Home/Form" method="post">
+                        <div class="row form-group">
+                            <label class="col-auto form-label"   for="inputMail">用戶信箱：</label>
+                            <input class="col      form-control" id="inputMail" type="text" />
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-auto form-label"   for="inputName">用戶姓名：</label>
+                            <input class="col      form-control" id="inputName" type="text" />
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-auto form-label"   for="inputPassword">登入密碼：</label>
+                            <input class="col      form-control" id="inputPassword" type="text" />
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-auto form-label"   for="retypePassword">確認密碼：</label>
+                            <input class="col      form-control" id="retypePassword" type="text" />
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-auto ml-auto">
+                                <a class="btn btn-rounded btn-outline-secondary" href="/Account/Login"><i class="fa fa-times"></i>&nbsp;取消</a>
+                                <a class="btn btn-rounded btn-primary" href="/"><i class="fas fa-user-plus"></i>&nbsp;註冊</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

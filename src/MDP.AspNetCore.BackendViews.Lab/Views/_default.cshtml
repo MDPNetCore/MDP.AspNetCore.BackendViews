@@ -1,0 +1,399 @@
+﻿@{
+    // main_header
+    var headerClassList = new List<string>();
+    headerClassList.Add(this.ViewBag.HeaderHidden ?? false ? "main-header-hidden" : string.Empty);
+    var main_header_class = string.Join(" ", headerClassList.Where(o => !String.IsNullOrEmpty(o)));
+
+    // main_content
+    var contentClassList = new List<string>();
+    contentClassList.Add(this.ViewBag.ContentFixed ?? false ? "main-content-fixed" : string.Empty);
+    var main_content_class = string.Join(" ", contentClassList.Where(o => !String.IsNullOrEmpty(o)));
+}
+
+<!doctype html>
+<html lang="zh-TW">
+<head>
+    <!-- title -->
+    <title>CLK Software</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- style -->
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/lib/mdp-backend-views/css/core.css" rel="stylesheet" />
+    <link href="/lib/mdp-backend-views/css/header.css" rel="stylesheet" />
+    <link href="/lib/mdp-backend-views/css/sidebar.css" rel="stylesheet" />
+    <link href="/lib/mdp-backend-views/css/content.css" rel="stylesheet" />
+    <link href="/lib/mdp-backend-views/css/mdp-backend-views.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- main-wrapper -->
+    <main class="main-wrapper">
+
+        <!-- main-header -->
+        <div class="main-header @main_header_class">
+            <nav class="navbar navbar-light">
+
+                <!-- left navbar -->
+                <ul class="navbar-nav">
+
+                    <!-- toggler -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#mainSidebar">
+                            <i class="navbar-toggler-icon"></i>
+                        </a>
+                    </li>
+
+                    <!-- brand -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <h5>CLK Software</h5>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- right navbar -->
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- content fixed  -->
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="contentFixedSwitch">
+                                <label class="form-check-label" for="contentFixedSwitch"></label>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- notifications -->
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="alert('icon');">
+                            <i class="bi bi-bell"></i>
+                        </a>
+                    </li>
+
+                    <!-- user profile -->
+                    <li class="nav-item">
+                        <!-- picture -->
+                        <a class="nav-link" data-bs-toggle="dropdown">
+                            <img class="img-circle-sm" src="/user.jpg" />
+                        </a>
+                        <!-- profile -->
+                        <ul class="nav-profile dropdown-menu dropdown-menu-end">
+                            <li>
+                                <div class="dropdown-item">
+                                    <img class="img-circle-lg" src="/user.jpg">
+                                </div>
+                            </li>
+                            <li><h5 class="dropdown-item">Clark Chou</h5></li>
+                            <li><h7 class="dropdown-item">Clark@hotmail.com</h7></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <div class="dropdown-item">
+                                    <a class="btn btn-primary d-block" href="/Account/Login"><i class="bi bi-box-arrow-right"></i>&nbsp;登出</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- main-content -->
+        <div class="main-content @main_content_class">
+            @RenderBody()
+        </div>
+
+        <!-- main-sidebar -->
+        <div class="main-sidebar">
+            <div class="offcanvas offcanvas-start" id="mainSidebar">
+                <nav class="navbar navbar-dark">
+
+                    <!-- brand navbar -->
+                    <ul class="navbar-nav mb-2">
+
+                        <!-- brand -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <img class="img-circle-sm" src="/user.jpg" />
+                                <h5>CLK Software</h5>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- examples navbar -->
+                    <ul class="navbar-nav">
+
+                        <!-- category -->
+                        <li class="nav-item">
+                            <a class="nav-menu-category">
+                                <p>examples</p>
+                            </a>
+                        </li>
+
+                        <!-- forms -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group-forms">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Forms</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-forms">
+                            <a class="nav-menu-item" href="/Forms/Form_1">
+                                <i class="bi bi-circle"></i>
+                                <p>Form_1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-forms">
+                            <a class="nav-menu-item" href="/Forms/Form_2">
+                                <i class="bi bi-circle"></i>
+                                <p>Form_2</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- layouts navbar -->
+                    <ul class="navbar-nav">
+
+                        <!-- category -->
+                        <li class="nav-item">
+                            <a class="nav-menu-category">
+                                <p>Layouts</p>
+                            </a>
+                        </li>
+
+                        <!-- layout_1 -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group-layout-1">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Layout_1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-1">
+                            <a class="nav-menu-item" href="/Layouts/Layout_1_1">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_1_1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-1">
+                            <a class="nav-menu-item" href="/Layouts/Layout_1_2">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_1_2</p>
+                            </a>
+                        </li>
+
+                        <!-- layout_2 -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group-layout-2">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Layout_2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-2">
+                            <a class="nav-menu-item" href="/Layouts/Layout_2_1">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_2_1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-2">
+                            <a class="nav-menu-item" href="/Layouts/Layout_2_2">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_2_2</p>
+                            </a>
+                        </li>
+
+                        <!-- layout_3 -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group-layout-3">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Layout_3</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-3">
+                            <a class="nav-menu-item" href="/Layouts/Layout_3_1">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_3_1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-3">
+                            <a class="nav-menu-item" href="/Layouts/Layout_3_2">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_3_2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-3">
+                            <a class="nav-menu-item" href="/Layouts/Layout_3_3">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_3_3</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-layout-3">
+                            <a class="nav-menu-item" href="/Layouts/Layout_3_4">
+                                <i class="bi bi-circle"></i>
+                                <p>Layout_3_4</p>
+                            </a>
+                        </li>
+
+                        <!-- layout_flex -->
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="/Layouts/Layout_Flex">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Layout_Flex</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- templates navbar -->
+                    <ul class="navbar-nav">
+
+                        <!-- category -->
+                        <li class="nav-item">
+                            <a class="nav-menu-category">
+                                <p>Templates</p>
+                            </a>
+                        </li>
+
+                        <!-- templates -->
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="/Templates/Default">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Default</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="/Templates/Blank">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Blank</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- lab navbar -->
+                    <ul class="navbar-nav">
+
+                        <!-- category -->
+                        <li class="nav-item">
+                            <a class="nav-menu-category">
+                                <p>=======================================</p>
+                            </a>
+                        </li>
+
+                        <!-- item -->
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="#" onclick="alert('item');">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Item</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="#" onclick="alert('item');">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Item</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="#" onclick="alert('item');">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Item</p>
+                            </a>
+                        </li>
+
+                        <!-- category -->
+                        <li class="nav-item">
+                            <a class="nav-menu-category">
+                                <p>Category</p>
+                            </a>
+                        </li>
+
+                        <!-- group1 -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group1">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Group1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group1">
+                            <a class="nav-menu-item" href="#" onclick="alert('group1-item1');">
+                                <i class="bi bi-circle"></i>
+                                <p>Item1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group1">
+                            <a class="nav-menu-item" href="#" onclick="alert('group1-item2');">
+                                <i class="bi bi-circle"></i>
+                                <p>Item2</p>
+                            </a>
+                        </li>
+
+                        <!-- group2 -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group2">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Group2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group2">
+                            <a class="nav-menu-item" href="#" onclick="alert('group2-item1');">
+                                <i class="bi bi-circle"></i>
+                                <p>Item1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group2">
+                            <a class="nav-menu-item" href="#" onclick="alert('group2-item2');">
+                                <i class="bi bi-circle"></i>
+                                <p>Item2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group2">
+                            <a class="nav-menu-item" href="#" onclick="alert('group2-item3');">
+                                <i class="bi bi-circle"></i>
+                                <p>Item3</p>
+                            </a>
+                        </li>
+
+                        <!-- item -->
+                        <li class="nav-item">
+                            <a class="nav-menu-item" href="#" onclick="alert('item');">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Item</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- script -->
+    <script src="/lib/@@popperjs/umd/popper.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/lib/mdp-backend-views/js/mdp-backend-views.js"></script>
+    <script>
+        (function () {
+
+            // contentFixedSwitch
+            let contentFixedSwitch = document.getElementById("contentFixedSwitch");
+            contentFixedSwitch.addEventListener("change", (event) => {
+                let content = document.getElementsByClassName("main-content")[0];
+                if (document.getElementsByClassName("flex-fill-scroll").length >= 1) {
+                    if (event.target.checked == true) {
+                        if (content.classList.contains("main-content-fixed") == false) {
+                            content.classList.add("main-content-fixed");
+                        }
+                    } else {
+                        if (content.classList.contains("main-content-fixed") == true) {
+                            content.classList.remove("main-content-fixed");
+                        }
+                    }
+                }
+            });
+            contentFixedSwitch.checked = document.getElementsByClassName("main-content")[0].classList.contains("main-content-fixed");
+        })();
+    </script>
+</body>
+</html>

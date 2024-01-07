@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "gulp": "^4.0.2",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.2",
+    "bootstrap-icons": "1.11.1",
+    "@popperjs/core": "2.11.8"
+  },
+  "scripts": {
+    "publish": "npm install && gulp publish"
+  }
+}

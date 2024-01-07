@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "_default";
+}
+
+<!-- content-header -->
+<div class="container-md container-md-fixed">
+    <h3 class="content-header">Form_2</h3>
+</div>
+
+<!-- content-body -->
+<div class="container-md container-md-fixed flex-fill">
+
+    <!-- card -->
+    <div class="card card-primary card-outline">
+
+        <!-- body -->
+        <div class="card-body">
+
+            <!-- title -->
+            <h5 class="card-title">客戶資料</h5>
+
+            <!-- content -->
+            <div class="row">
+                <label class="col-auto form-label" for="inputName">客戶姓名：</label>
+                <input class="col      form-control" id="inputName" type="text" />
+            </div>
+            <div class="row">
+                <label class="col-auto form-label" for="inputPhone">客戶電話：</label>
+                <input class="col      form-control" id="inputPhone" type="text" />
+            </div>
+            <div class="row">
+                <label class="col-auto form-label" for="inputAddress">客戶地址：</label>
+                <input class="col      form-control" id="inputAddress" type="text" />
+            </div>
+            <div class="row">
+                <label class="col-auto form-label" for="inputMessage">客戶備註：</label>
+                <textarea class="col   form-control" id="inputMessage" type="text" rows="5"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- card -->
+    <div class="card mt-3">
+
+        <!-- body -->
+        <div class="card-body">
+
+            <!-- title -->
+            <h5 class="card-title">訂單資料</h5>
+
+            <!-- content -->
+            <div class="row">
+                <label class="col-auto form-label" for="inputName">訂單編號：</label>
+                <input class="col      form-control" id="inputName" type="text" />
+            </div>
+            <div class="row">
+                <label class="col-auto form-label" for="inputPhone">訂單日期：</label>
+                <input class="col      form-control" id="inputPhone" type="text" />
+            </div>
+            <div class="row">
+                <label class="col-auto form-label" for="inputAddress">訂單金額：</label>
+                <input class="col      form-control" id="inputAddress" type="text" />
+            </div>
+            <div class="row">
+                <label class="col-auto form-label" for="inputMessage">訂單內容：</label>
+                <textarea class="col   form-control" id="inputMessage" type="text" rows="5"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- card -->
+    <div class="card mt-3">
+
+        <!-- body -->
+        <div class="card-body text-end">
+            <a class="btn btn-secondary" href="#" onclick="alert('取消');"><i class="bi bi-x-lg"></i>&nbsp;取消</a>
+            <a class="btn btn-primary" href="#" onclick="alert('儲存');"><i class="bi bi-check-lg"></i>&nbsp;儲存</a>
+        </div>
+    </div>
+</div>
