@@ -7,32 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\lib\mdp-backend-views\css\content.css" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\css\core.css" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\css\header.css" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\css\mdp-backend-views.css" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\css\sidebar.css" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\img\auth\facebook.png" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\img\auth\google.ico" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\img\auth\line.ico" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\img\auth\microsoft.ico" />
-    <Content Remove="wwwroot\lib\mdp-backend-views\js\mdp-backend-views.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\css\content.css" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\css\core.css" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\css\header.css" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\css\mdp-backend-views.css" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\css\sidebar.css" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\img\auth\facebook.png" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\img\auth\google.ico" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\img\auth\line.ico" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\img\auth\microsoft.ico" />
-    <EmbeddedResource Include="wwwroot\lib\mdp-backend-views\js\mdp-backend-views.js" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MDP.AspNetCore" Version="6.1.8" />
   </ItemGroup>
 

@@ -1,0 +1,60 @@
+
+
+/* ---------- header ---------- */
+
+/* navbar */
+.main-header .navbar {
+    flex: 1 1 auto;
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6; 
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* navbar-nav */
+.main-header .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* nav-item */
+.main-header .nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* nav-link */
+.main-header .nav-link {
+    padding: 0rem 0.5rem;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+/* nav-profile */
+.main-header .nav-profile {
+    margin: 0rem;
+    padding: 0.5rem;
+    position: absolute;
+    min-width: 250px;
+    text-align: center;
+}
+
+.main-header .nav-profile .dropdown-item {
+    margin-top: 0.5rem;
+    padding: 0rem 0.5rem;
+}
+
+.main-header .nav-profile .dropdown-divider {
+    margin-top: 0.5rem;
+    padding: 0rem 0.5rem;
+}

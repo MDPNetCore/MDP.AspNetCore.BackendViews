@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "_default";
+}
+
+<!-- content -->
+<div class="container-fluid flex-fill">
+    <div class="row flex-fill">
+        <div class="col flex-fill flex-column justify-content-center align-items-center">
+
+            <!-- card -->
+            <div class="card card-primary card-outline" style="max-width:350px">
+
+                <!-- header -->
+                <h3 class="card-header text-center">
+                    CLK Software
+                </h3>
+
+                <!-- body -->
+                <div class="card-body gap-3">
+
+                    <!-- password -->
+                    <div class="row flex-wrap gap-3">
+                        <div class="col-12">
+                            <label class="form-label" for="mail">信箱：</label>
+                            <input class="form-control" id="mail" type="text" />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="password">密碼：</label>
+                            <input class="form-control" id="password" type="text" />
+                        </div>
+                        <div class="col-12">
+                            <a class="btn btn-primary flex-fill" href="/"><i class="bi bi-box-arrow-in-right"></i>&nbsp;登入</a>
+                        </div>
+                    </div>
+                    <hr class="m-0" />
+
+                    <!-- oauth -->
+                    <div class="row flex-wrap gap-3">
+                        <div class="col-12">
+                            <a class="btn btn-flex btn-outline-secondary flex-fill" href="/">
+                                <img class="img-square-xs" src="/lib/mdp-backend-views/img/oauth/line.ico">
+                                &nbsp;使用 Line 登入
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="btn btn-flex btn-outline-secondary flex-fill" href="/">
+                                <img class="img-square-xs" src="/lib/mdp-backend-views/img/oauth/google.ico">
+                                &nbsp;使用 Google 登入
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="btn btn-flex btn-outline-secondary flex-fill" href="/">
+                                <img class="img-square-xs" src="/lib/mdp-backend-views/img/oauth/facebook.png">
+                                &nbsp;使用 Facebook 登入
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="btn btn-flex btn-outline-secondary flex-fill" href="/">
+                                <img class="img-square-xs" src="/lib/mdp-backend-views/img/oauth/microsoft.ico">
+                                &nbsp;使用 Microsoft Account 登入
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="m-0" />
+
+                    <!-- other -->
+                    <div class="row">
+                        <div class="col-12 flex-column">
+                            <a href="/Auth/Register">I forgot my password</a>
+                            <a href="/Auth/Register">Register a new membership</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

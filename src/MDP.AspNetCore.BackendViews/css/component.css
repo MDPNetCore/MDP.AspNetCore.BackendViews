@@ -1,0 +1,130 @@
+
+
+/* ---------- component ---------- */
+
+/* navbar */
+.main-wrapper .navbar-dark {
+    color: rgba(255, 255, 255, 0.65);
+    background-color: #343a40;
+}
+
+.main-wrapper .navbar-light {
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #f8f9fa;
+}
+
+/* card */
+.main-wrapper .card {
+    transition: none !important;
+    animation: none !important;
+}
+
+.main-wrapper .card-header {
+    padding: 1rem;
+}
+
+.main-wrapper .card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: normal;
+}
+
+.main-wrapper .card-title {
+    padding-bottom: 1rem;
+}
+
+.main-wrapper .card-footer {
+    padding: 1rem;
+}
+
+.main-wrapper .card-outline.card-primary {
+    border-top: 3px solid #007bff;
+}
+
+.main-wrapper .card-outline.card-danger {
+    border-top: 3px solid #dc3545;
+}
+
+/* table */
+.main-wrapper .table th {
+    white-space: nowrap;
+}
+
+.main-wrapper .table td {
+    white-space: nowrap;
+}
+
+.main-wrapper .table .th-auto {
+    width: 1pt;
+}
+
+.main-wrapper .table .td-auto {
+    width: 1pt;
+}
+
+.main-wrapper .table-hover-pointer td {
+    cursor: pointer;
+}
+
+/* pagination */
+.main-wrapper .pagination {
+    margin: 0rem;
+}
+
+.main-wrapper .pagination-outline-secondary .page-link {
+    color: #6c757d; 
+    border: 1px solid #6c757d; 
+}
+
+.main-wrapper .pagination-outline-secondary .page-link:hover {
+    color: #fff; 
+    background-color: #6c757d; 
+    border-color: #6c757d;
+}
+
+.main-wrapper .pagination-outline-secondary .page-item.active .page-link {
+    color: #fff; 
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* btn */
+.main-wrapper .btn {
+    font-weight: 700 !important;
+}
+
+.main-wrapper .btn-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: center;
+}
+
+/* label */
+.main-wrapper .form-label {
+    margin: 0rem;
+    white-space: nowrap;
+}
+
+/* switch */
+.main-wrapper .form-switch {
+    margin: 0rem;
+    padding: 0rem;
+    min-height: initial;
+    display: flex;
+    align-items: center;
+}
+
+.main-wrapper .form-switch .form-check-input {
+    margin: 0rem;
+    border-color: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+}
+
+.main-wrapper .form-switch .form-check-label {
+    margin-left: 0.25rem;
+    cursor: pointer;
+}

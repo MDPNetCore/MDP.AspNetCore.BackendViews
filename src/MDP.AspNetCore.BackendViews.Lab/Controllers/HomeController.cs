@@ -9,7 +9,8 @@ namespace MDP.AspNetCore.BackendViews.Lab
         public ActionResult Index()
         {
             // Return
-            return RedirectToAction("Form_1", "Forms");
+            //return RedirectToAction("List", "Crud");
+            return View();
         }
     }
 }

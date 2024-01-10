@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "_default";
+}
+
+<!-- content-header -->
+<div class="container-fluid">
+    <h3 class="content-header">List</h3>
+</div>
+
+<!-- content-body -->
+<div class="container-fluid flex-fill gap-3">
+
+    <!-- search -->
+    <div class="card collapse show" id="searchPanel">
+        <div class="card-body">
+            <div class="row flex-wrap gap-3">
+
+                <!-- arguments -->
+                <div class="col-12 col-md-auto align-items-md-center">
+                    <label class="form-label" for="name">客戶姓名：</label>
+                    <input class="form-control" id="name" type="text" />
+                </div>
+                <div class="col-12 col-md-auto align-items-md-center">
+                    <label class="form-label" for="phone">客戶電話：</label>
+                    <input class="form-control" id="phone" type="text" />
+                </div>
+                <div class="col-12 col-md-auto align-items-md-center">
+                    <label class="form-label" for="address">客戶地址：</label>
+                    <input class="form-control" id="address" type="text" />
+                </div>
+
+                <!-- command -->
+                <div class="col-auto ms-auto ms-md-0">
+                    <a class="btn btn-primary ms-auto" href="#" onclick="alert('查詢');"><i class="bi bi-search"></i>&nbsp;查詢</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="card">
+        <div class="card-body gap-3">
+
+            <!-- command -->
+            <div class="row">
+                <div class="col-auto gap-2">
+                    <a class="btn btn-outline-primary" href="/Crud/Add"><i class="bi bi-plus-lg"></i>&nbsp;新增</a>
+                    <a class="btn btn-outline-secondary" href="#" onclick="alert('匯入');"><i class="bi bi-cloud-upload"></i>&nbsp;匯入</a>
+                    <a class="btn btn-outline-secondary" href="#" onclick="alert('匯出');"><i class="bi bi-cloud-download"></i>&nbsp;匯出</a>
+                </div>
+                <div class="col-auto ms-auto d-none d-md-flex align-items-start">
+                    <div class="btn-group mx-2">
+                        <a class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#searchPanel"><i class="bi bi-funnel"></i></a>
+                        <a class="btn btn-outline-secondary" onclick="window.location.reload();"><i class="bi bi-arrow-repeat"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- table -->
+            <div class="row">
+                <div class="col-12 table-responsive">
+                    <table class="table table-hover table-hover-pointer m-0">
+
+                        <!-- header -->
+                        <thead>
+                            <tr>
+                                <th>客戶姓名</th>
+                                <th>客戶電話</th>
+                                <th>客戶地址</th>
+                                <th class="th-auto"></th>
+                            </tr>
+                        </thead>
+
+                        <!-- body -->
+                        <tbody>
+                             @for (int i = 0; i < 10; i++)
+                            {
+                                <tr>
+                                    <td onclick="window.location.href='/CRUD/Detail';">Clark</td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">0912345678</td>
+                                    <td onclick="window.location.href='/CRUD/Detail';">台北101</td>
+                                    <td class="td-auto">
+                                        <a class="btn btn-sm btn btn-outline-secondary" href="/CRUD/Update"><i class="bi bi-pencil"></i>&nbsp;修改</a>
+                                        <a class="btn btn-sm btn btn-outline-secondary" href="/CRUD/Remove"><i class="bi bi-trash"></i>&nbsp;刪除</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- pagination -->
+            <div class="row">
+                <div class="col-auto ms-auto">
+                    <ul class="pagination pagination-outline-secondary">
+                        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

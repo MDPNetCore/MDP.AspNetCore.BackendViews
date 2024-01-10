@@ -1,0 +1,11 @@
+
+
+/* ---------- content ---------- */
+
+/* content-header */
+.main-content .content-header {
+    padding-bottom: 1rem;
+    color: inherit;
+    background-color: inherit;
+    flex-shrink: 0;
+}

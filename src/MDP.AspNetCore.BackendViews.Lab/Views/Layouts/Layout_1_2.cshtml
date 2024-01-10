@@ -10,15 +10,17 @@
 <!-- content-body -->
 <div class="container-fluid flex-fill">
     <div class="row flex-fill">
+        <div class="col flex-fill flex-column justify-content-center align-items-center">
 
-        <!-- block001 -->
-        <div class="col-auto flex-fixed flex-column flex-fill-scroll m-auto bg-grey" style="width:300px;height:400px;">
-            <div>block001 - start</div>
-            @for (var i = 0; i < 100; i++)
-            {
-                <div>block001</div>
-            }
-            <div>block001 - end</div>
+            <!-- block001 -->
+            <div class="bg-grey">
+                <div>block001 - start</div>
+                @for (var i = 0; i < 10; i++)
+                {
+                    <div>block001</div>
+                }
+                <div>block001 - end</div>
+            </div>            
         </div>
     </div>
 </div>

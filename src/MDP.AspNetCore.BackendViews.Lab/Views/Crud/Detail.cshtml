@@ -4,7 +4,7 @@
 
 <!-- content-header -->
 <div class="container-md container-md-fixed">
-    <h3 class="content-header">Form_1</h3>
+    <h3 class="content-header">Detail</h3>
 </div>
 
 <!-- content-body -->
@@ -21,19 +21,19 @@
             <div class="row flex-wrap gap-3">
                 <div class="col-12">
                     <label class="form-label" for="name">客戶姓名：</label>
-                    <input class="form-control" id="name" type="text" />
+                    <input class="form-control" id="name" type="text" disabled value="Clark" />
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="phone">客戶電話：</label>
-                    <input class="form-control" id="phone" type="text" />
+                    <input class="form-control" id="phone" type="text" disabled value="0912345678" />
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="address">客戶地址：</label>
-                    <input class="form-control" id="address" type="text" />
+                    <input class="form-control" id="address" type="text" disabled value="台北101" />
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="message">客戶備註：</label>
-                    <textarea class="form-control" id="message" type="text" rows="5"></textarea>
+                    <textarea class="form-control" id="message" type="text" disabled rows="5"></textarea>
                 </div>
             </div>
         </div>
@@ -46,8 +46,7 @@
             <!-- command -->
             <div class="row">
                 <div class="col-auto ms-auto gap-2">
-                    <a class="btn btn-outline-secondary" href="/"><i class="bi bi-x-lg"></i>&nbsp;取消</a>
-                    <a class="btn btn-primary" href="/"><i class="bi bi-check-lg"></i>&nbsp;儲存</a>
+                    <a class="btn btn-primary" href="/Crud/List"><i class="bi bi-check-lg"></i>&nbsp;確認</a>
                 </div>
             </div>
         </div>

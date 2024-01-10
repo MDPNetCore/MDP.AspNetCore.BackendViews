@@ -1,0 +1,270 @@
+
+
+/* ---------- template ---------- */
+
+/* main-wrapper */
+.main-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: normal;
+}
+
+/* main-sidebar */
+.main-sidebar {
+    width: 0rem;
+    height: 0rem;
+}
+
+/* main-header */
+.main-header {
+    height: 3.5rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: normal;
+}
+
+.main-header-hidden {
+    display: none;
+}
+
+/* main-content */
+.main-content {
+    flex: 1 1 auto;
+    padding: 1rem;
+    color: #212529;
+    background-color: #f4f6f9;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.main-content-fixed {
+    min-height: 0rem;
+}
+
+.main-content-fixed .flex-fill {
+    min-height: 0rem;
+}
+
+.main-content-fixed .flex-fill-scroll {
+    min-height: auto !important;
+    overflow: auto !important;
+}
+
+.main-content-fixed .flex-fill-scroll .flex-fill {
+    min-height: auto !important;
+}
+
+
+/* ---------- layout ---------- */
+
+/* container */
+.main-wrapper .container-sm,
+.main-wrapper .container-md,
+.main-wrapper .container-fluid {
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+}
+
+.main-wrapper .container-sm-fixed {
+    max-width: 540px !important;
+}
+
+.main-wrapper .container-md-fixed {
+    max-width: 720px !important;
+}
+
+.main-wrapper .container-fluid-fixed {
+    max-width: 100% !important;
+}
+
+/* grid */
+.main-wrapper .row {
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: normal;
+}
+
+.main-wrapper .col {
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: normal;
+}
+
+.main-wrapper .col-12 {
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: normal;
+}
+
+.main-wrapper .col-auto {
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: normal;
+}
+
+
+/* ---------- theme ---------- */
+
+/* element */
+.main-wrapper a {
+    text-decoration: none;
+}
+
+.main-wrapper *:focus {
+    box-shadow: none;
+}
+
+.main-wrapper a,
+.main-wrapper p,
+.main-wrapper hr,
+.main-wrapper h1,
+.main-wrapper h2,
+.main-wrapper h3,
+.main-wrapper h4,
+.main-wrapper h5,
+.main-wrapper h6,
+.main-wrapper h7 {
+    margin: 0rem;
+    margin-block: 0rem;
+}
+
+.main-wrapper * {
+    font-family: 'Google Webfont', 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+}
+
+
+/* ---------- extend ---------- */
+
+/* flex */
+.flex-fixed {
+    flex-shrink: 0;
+}
+
+/* image  */
+.img-circle {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.img-circle-xs {
+    width: 1rem;
+    height: 1rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.img-circle-sm {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.img-circle-md {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.img-circle-lg {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.img-square {
+    object-fit: cover;
+}
+
+.img-square-xs {
+    width: 1rem;
+    height: 1rem;
+    object-fit: cover;
+}
+
+.img-square-sm {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+.img-square-md {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.img-square-lg {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+}
+
+/* color */
+.bg-red {
+    background-color: red !important;
+}
+
+.bg-yellow {
+    background-color: yellow !important;
+}
+
+.bg-green {
+    background-color: green !important;
+}
+
+.bg-blue {
+    background-color: blue !important;
+}
+
+.bg-purple {
+    background-color: purple !important;
+}
+
+.bg-pink {
+    background-color: pink !important;
+}
+
+.bg-orange {
+    background-color: orange !important;
+}
+
+.bg-brown {
+    background-color: brown !important;
+}
+
+.bg-grey {
+    background-color: grey !important;
+}

@@ -1,0 +1,38 @@
+name: github-container-registry-build-deployment
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  IMAGE_NAME: "mdp-backend-app"
+  GITHUB_SERVER_NAME: "ghcr.io"
+  GITHUB_REGISTRY_NAME: "mdpnetcore"
+  DOCKER_FILE_PATH: ./src/MDP.AspNetCore.BackendViews.Lab/Dockerfile
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub Repository
+        uses: actions/checkout@v4
+
+      - name: Setup DockerBuildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login ContainerRegistry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ env.GITHUB_SERVER_NAME }}
+          username: ${{ secrets.DEPLOY_ACCOUNT }}
+          password: ${{ secrets.DEPLOY_CREDENTIALS }}
+
+      - name: Deploy ContainerRegistry
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ${{ env.DOCKER_FILE_PATH }}
+          push: true
+          tags: ${{ env.GITHUB_SERVER_NAME }}/${{ env.GITHUB_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}

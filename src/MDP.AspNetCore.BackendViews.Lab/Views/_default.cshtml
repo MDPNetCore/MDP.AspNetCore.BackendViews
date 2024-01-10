@@ -23,11 +23,7 @@
     <!-- style -->
     <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="/lib/mdp-backend-views/css/core.css" rel="stylesheet" />
-    <link href="/lib/mdp-backend-views/css/header.css" rel="stylesheet" />
-    <link href="/lib/mdp-backend-views/css/sidebar.css" rel="stylesheet" />
-    <link href="/lib/mdp-backend-views/css/content.css" rel="stylesheet" />
-    <link href="/lib/mdp-backend-views/css/mdp-backend-views.css" rel="stylesheet" />
+    <link href="/lib/mdp-backend-views/css/mdp-backend-views.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -94,7 +90,7 @@
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <div class="dropdown-item">
-                                    <a class="btn btn-primary d-block" href="/Account/Login"><i class="bi bi-box-arrow-right"></i>&nbsp;登出</a>
+                                    <a class="btn btn-primary d-block" href="/Auth/Login"><i class="bi bi-box-arrow-right"></i>&nbsp;登出</a>
                                 </div>
                             </li>
                         </ul>
@@ -118,8 +114,8 @@
 
                         <!-- brand -->
                         <li class="nav-item">
-                            <a class="nav-link" href="/">
-                                <img class="img-circle-sm" src="/user.jpg" />
+                            <a class="nav-menu-item" href="/">
+                                <img class="img-circle-sm" src="/logo.png" />
                                 <h5>CLK Software</h5>
                             </a>
                         </li>
@@ -132,6 +128,82 @@
                         <li class="nav-item">
                             <a class="nav-menu-category">
                                 <p>examples</p>
+                            </a>
+                        </li>
+
+                        <!-- crud -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group-crud">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>CRUD</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-crud">
+                            <a class="nav-menu-item" href="/Crud/List">
+                                <i class="bi bi-circle"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-crud">
+                            <a class="nav-menu-item" href="/Crud/Add">
+                                <i class="bi bi-circle"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-crud">
+                            <a class="nav-menu-item" href="/Crud/Update">
+                                <i class="bi bi-circle"></i>
+                                <p>Update</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-crud">
+                            <a class="nav-menu-item" href="/Crud/Remove">
+                                <i class="bi bi-circle"></i>
+                                <p>Remove</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-crud">
+                            <a class="nav-menu-item" href="/Crud/Detail">
+                                <i class="bi bi-circle"></i>
+                                <p>Detail</p>
+                            </a>
+                        </li>
+
+                        <!-- auth -->
+                        <li class="nav-item">
+                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group-auth">
+                                <i class="bi bi-menu-button-wide"></i>
+                                <p>Auth</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-auth">
+                            <a class="nav-menu-item" href="/Auth/Login">
+                                <i class="bi bi-circle"></i>
+                                <p>Login</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-auth">
+                            <a class="nav-menu-item" href="/Auth/Register">
+                                <i class="bi bi-circle"></i>
+                                <p>Register</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-auth">
+                            <a class="nav-menu-item" href="/Auth/NotFound404">
+                                <i class="bi bi-circle"></i>
+                                <p>NotFound404</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-auth">
+                            <a class="nav-menu-item" href="/Auth/ServerError500">
+                                <i class="bi bi-circle"></i>
+                                <p>ServerError500</p>
+                            </a>
+                        </li>
+                        <li class="nav-item collapse group-auth">
+                            <a class="nav-menu-item" href="/Auth/AccessDenied403">
+                                <i class="bi bi-circle"></i>
+                                <p>AccessDenied403</p>
                             </a>
                         </li>
 
@@ -271,98 +343,6 @@
                             </a>
                         </li>
                     </ul>
-
-                    <!-- lab navbar -->
-                    <ul class="navbar-nav">
-
-                        <!-- category -->
-                        <li class="nav-item">
-                            <a class="nav-menu-category">
-                                <p>=======================================</p>
-                            </a>
-                        </li>
-
-                        <!-- item -->
-                        <li class="nav-item">
-                            <a class="nav-menu-item" href="#" onclick="alert('item');">
-                                <i class="bi bi-menu-button-wide"></i>
-                                <p>Item</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-menu-item" href="#" onclick="alert('item');">
-                                <i class="bi bi-menu-button-wide"></i>
-                                <p>Item</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-menu-item" href="#" onclick="alert('item');">
-                                <i class="bi bi-menu-button-wide"></i>
-                                <p>Item</p>
-                            </a>
-                        </li>
-
-                        <!-- category -->
-                        <li class="nav-item">
-                            <a class="nav-menu-category">
-                                <p>Category</p>
-                            </a>
-                        </li>
-
-                        <!-- group1 -->
-                        <li class="nav-item">
-                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group1">
-                                <i class="bi bi-menu-button-wide"></i>
-                                <p>Group1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item collapse group1">
-                            <a class="nav-menu-item" href="#" onclick="alert('group1-item1');">
-                                <i class="bi bi-circle"></i>
-                                <p>Item1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item collapse group1">
-                            <a class="nav-menu-item" href="#" onclick="alert('group1-item2');">
-                                <i class="bi bi-circle"></i>
-                                <p>Item2</p>
-                            </a>
-                        </li>
-
-                        <!-- group2 -->
-                        <li class="nav-item">
-                            <a class="nav-menu-group collapsed" data-bs-toggle="collapse" data-bs-target=".group2">
-                                <i class="bi bi-menu-button-wide"></i>
-                                <p>Group2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item collapse group2">
-                            <a class="nav-menu-item" href="#" onclick="alert('group2-item1');">
-                                <i class="bi bi-circle"></i>
-                                <p>Item1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item collapse group2">
-                            <a class="nav-menu-item" href="#" onclick="alert('group2-item2');">
-                                <i class="bi bi-circle"></i>
-                                <p>Item2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item collapse group2">
-                            <a class="nav-menu-item" href="#" onclick="alert('group2-item3');">
-                                <i class="bi bi-circle"></i>
-                                <p>Item3</p>
-                            </a>
-                        </li>
-
-                        <!-- item -->
-                        <li class="nav-item">
-                            <a class="nav-menu-item" href="#" onclick="alert('item');">
-                                <i class="bi bi-menu-button-wide"></i>
-                                <p>Item</p>
-                            </a>
-                        </li>
-                    </ul>
                 </nav>
             </div>
         </div>
@@ -372,15 +352,17 @@
     <!-- script -->
     <script src="/lib/@@popperjs/umd/popper.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/lib/mdp-backend-views/js/mdp-backend-views.js"></script>
+    <script src="/lib/mdp-backend-views/js/mdp-backend-views.min.js"></script>
     <script>
         (function () {
 
             // contentFixedSwitch
             let contentFixedSwitch = document.getElementById("contentFixedSwitch");
-            contentFixedSwitch.addEventListener("change", (event) => {
-                let content = document.getElementsByClassName("main-content")[0];
-                if (document.getElementsByClassName("flex-fill-scroll").length >= 1) {
+            if (contentFixedSwitch !== null) {
+
+                // event
+                contentFixedSwitch.addEventListener("change", (event) => {
+                    let content = document.getElementsByClassName("main-content")[0];
                     if (event.target.checked == true) {
                         if (content.classList.contains("main-content-fixed") == false) {
                             content.classList.add("main-content-fixed");
@@ -390,9 +372,16 @@
                             content.classList.remove("main-content-fixed");
                         }
                     }
+                });
+
+                // display
+                if (document.getElementsByClassName("flex-fill-scroll").length < 1) {
+                    contentFixedSwitch.style.display = "none";
                 }
-            });
-            contentFixedSwitch.checked = document.getElementsByClassName("main-content")[0].classList.contains("main-content-fixed");
+
+                // checked
+                contentFixedSwitch.checked = document.getElementsByClassName("main-content")[0].classList.contains("main-content-fixed");
+            }
         })();
     </script>
 </body>

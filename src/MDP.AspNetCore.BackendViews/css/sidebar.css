@@ -1,0 +1,103 @@
+
+
+/* ---------- sidebar ---------- */
+
+/* offcanvas */
+.main-sidebar .offcanvas {
+    width: 250px !important;
+    height: 100vh !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* navbar */
+.main-sidebar .navbar {
+    flex: 1 1 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* navbar-nav */
+.main-sidebar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+/* nav-item */
+.main-sidebar .nav-item {
+    height: 2.5rem;
+    transition: none !important;
+    animation: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.main-sidebar .nav-item.collapse:not(.show) {
+    display: none;
+}
+
+/* nav-menu-item */
+.main-sidebar .nav-menu-item {
+    flex: 1 1 auto;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-sidebar .collapse .nav-menu-item {
+    padding-left: 1rem;
+}
+
+.main-sidebar .nav-menu-item:hover {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* nav-menu-category */
+.main-sidebar .nav-menu-category {
+    flex: 1 1 auto;
+    color: inherit;
+    text-transform: uppercase !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* nav-menu-group */
+.main-sidebar .nav-menu-group {
+    flex: 1 1 auto;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-sidebar .nav-menu-group:hover {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-sidebar .nav-menu-group::after { /*¤U*/
+    margin-left: auto;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='rgba(255,255,255,0.65)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 13l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.main-sidebar .nav-menu-group.collapsed::after { /*¥k*/
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='rgba(255,255,255,0.65)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 9l6 6-6 6'/%3e%3c/svg%3e");
+}
